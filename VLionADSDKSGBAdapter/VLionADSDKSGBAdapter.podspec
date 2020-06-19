@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "VLionADSDKSGBAdapter"
-    spec.version      = "1.0.3"
+    spec.version      = "1.0.5"
     spec.summary      = "瑞狮聚合SDK"
     
     spec.description  = <<-DESC
@@ -22,5 +22,6 @@ Pod::Spec.new do |spec|
 
     spec.vendored_frameworks = 'VLionADSDKSGBAdapter/VLionADSDKSGBAdapter.framework'
     spec.dependency 'SigmobAd-iOS'
-
+    spec.dependency 'VlionPolyAdSDK‘
+    
 end
