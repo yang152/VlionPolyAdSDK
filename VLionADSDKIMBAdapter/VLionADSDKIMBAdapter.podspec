@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "VLionADSDKIMBAdapter"
-    spec.version      = "1.0.1"
+    spec.version      = "1.0.3"
     spec.summary      = "瑞狮聚合SDK"
     
     spec.description  = <<-DESC
@@ -20,7 +20,7 @@ Pod::Spec.new do |spec|
 
     spec.source       = { :git => "https://github.com/yang152/VlionPolyAdSDK.git", :tag => "#{spec.version}" }
 
-    spec.vendored_frameworks = 'VLionADSDKIMBAdapter.framework'
+    spec.vendored_frameworks = 'VLionADSDKIMBAdapter/VLionADSDKIMBAdapter.framework'
     spec.dependency 'GDTMobSDK'
 
 end
