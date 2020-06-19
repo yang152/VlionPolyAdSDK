@@ -18,15 +18,10 @@ Pod::Spec.new do |spec|
 
     spec.platform     = :ios, "9.0"
 
-    spec.source       = { :git => "https://github.com/advlion-com/gamecenter_sdk_ios.git", :tag => "#{spec.version}" }
+    spec.source       = { :git => "https://github.com/yang152/VlionPolyAdSDK.git", :tag => "#{spec.version}" }
 
-    spec.vendored_frameworks = 'RSGameVlionAd.framework'
-    spec.resource = 'RSGameVlionAd.bundle'
-    spec.dependency 'Bytedance-UnionAD'
+    spec.vendored_frameworks = 'VLionADSDK/RSGameVlionAd.framework'
+    spec.resource = 'VLionADSDK/VLionAdImg.bundle'
     
-    valid_archs = ['armv7', 'armv7s', 'x86_64', 'arm64']
-    spec.xcconfig = {
-      'VALID_ARCHS' =>  valid_archs.join(' '),
-    }
 
 end
