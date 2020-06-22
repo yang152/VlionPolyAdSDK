@@ -2,9 +2,9 @@
 
 Pod::Spec.new do |spec|
 
-  spec.name         = "VLionPolyAdSDK"
-  spec.version      = "1.1.0"
-  spec.summary      = "VLionPolyAdSDK."
+  spec.name         = "VlionPolyAdSDK"
+  spec.version      = "1.1.1"
+  spec.summary      = "VlionPolyAdSDK."
 
   spec.description  = <<-DESC
               TopOn SDK for developer
@@ -79,3 +79,4 @@ Pod::Spec.new do |spec|
   
 
 end
+
