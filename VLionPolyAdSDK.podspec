@@ -20,7 +20,6 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"
   spec.ios.deployment_target = '9.0'
   spec.requires_arc = true
-  spec.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   valid_archs = ['armv7', 'armv7s', 'x86_64', 'arm64']
   
   spec.default_subspecs = 'VLionPolyAdSDK'
@@ -30,6 +29,7 @@ Pod::Spec.new do |spec|
      ss.ios.deployment_target = '9.0'
      ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDK/VLionADSDK.framework'
      ss.resource = 'VLionPolyAdSDK/VLionADSDK/VLionAdImg.bundle'
+     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
   spec.subspec 'VLionADSDKBDAdapter' do |ss|
@@ -37,6 +37,7 @@ Pod::Spec.new do |spec|
      ss.ios.deployment_target = '9.0'
      ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDKBDAdapter/VLionADSDKBDAdapter.framework'
      ss.dependency 'BaiduMobAd_SDK'
+     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
   spec.subspec 'VLionADSDKBUAdapter' do |ss|
@@ -44,6 +45,7 @@ Pod::Spec.new do |spec|
      ss.ios.deployment_target = '9.0'
      ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDKBUAdapter/VLionADSDKBUAdapter.framework'
      ss.dependency 'Bytedance-UnionAD'
+     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
   spec.subspec 'VLionADSDKGDTAdapter' do |ss|
@@ -51,6 +53,7 @@ Pod::Spec.new do |spec|
      ss.ios.deployment_target = '9.0'
      ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDKGDTAdapter/VLionADSDKGDTAdapter.framework'
      ss.dependency 'GDTMobSDK'
+     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
   spec.subspec 'VLionADSDKIMBAdapter' do |ss|
@@ -58,6 +61,7 @@ Pod::Spec.new do |spec|
      ss.ios.deployment_target = '9.0'
      ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDKIMBAdapter/VLionADSDKIMBAdapter.framework'
      ss.dependency 'InMobiSDK-China', '~> 7.4.3'
+     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
   spec.subspec 'VLionADSDKKSAdapter' do |ss|
@@ -65,6 +69,7 @@ Pod::Spec.new do |spec|
      ss.ios.deployment_target = '9.0'
      ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDKKSAdapter/VLionADSDKKSAdapter.framework'
      ss.dependency 'KSAdSDK'
+     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
   spec.subspec 'VLionADSDKSGBAdapter' do |ss|
@@ -72,6 +77,7 @@ Pod::Spec.new do |spec|
      ss.ios.deployment_target = '9.0'
      ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDKSGBAdapter/VLionADSDKSGBAdapter.framework'
      ss.dependency 'SigmobAd-iOS'
+     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
 
