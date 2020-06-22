@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "VlionPolyAdSDK"
-    spec.version      = "1.1.6"
+    spec.version      = "1.1.7"
     spec.summary      = "瑞狮聚合SDK"
     
     spec.description  = <<-DESC
@@ -20,8 +20,11 @@ Pod::Spec.new do |spec|
 
     spec.source       = { :git => "https://github.com/yang152/VlionPolyAdSDK.git", :tag => "#{spec.version}" }
 
-    spec.vendored_frameworks = 'VLionADSDK.framework'
-    spec.resource = 'VLionAdImg.bundle'
-    
+    spec.dependency 'VLionAdSDKPoly' , :git => 'https://github.com/yang152/VlionPolyAdSDK.git'
+    spec.dependency 'VLionAdSDKPoly/VLionADSDKGDTAdapter' , :git => 'https://github.com/yang152/VlionPolyAdSDK.git'
+    spec.dependency 'VLionAdSDKPoly/VLionADSDKBDAdapter' , :git => 'https://github.com/yang152/VlionPolyAdSDK.git'
+    spec.dependency 'VLionAdSDKPoly/VLionADSDKIMBAdapter' , :git => 'https://github.com/yang152/VlionPolyAdSDK.git'
+    spec.dependency 'VLionAdSDKPoly/VLionADSDKKSAdapter' , :git => 'https://github.com/yang152/VlionPolyAdSDK.git'
+    spec.dependency 'VLionAdSDKPoly/VLionADSDKSGBAdapter' , :git => 'https://github.com/yang152/VlionPolyAdSDK.git'
 
 end
