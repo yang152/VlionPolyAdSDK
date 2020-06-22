@@ -21,7 +21,7 @@ Pod::Spec.new do |spec|
     spec.source       = { :git => "https://github.com/yang152/VlionPolyAdSDK.git", :tag => "#{spec.version}" }
 
     spec.vendored_frameworks = 'VLionADSDKGDTAdapter/VLionADSDKGDTAdapter.framework'
-    spec.dependency 'GDTMobSDK'
-    spec.dependency 'VlionPolyAdSDK‘
+    spec.dependency 'GDTMobSDK' , VlionPolyAdSDK
     
+
 end
