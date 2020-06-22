@@ -2,9 +2,9 @@
 
 Pod::Spec.new do |spec|
 
-  spec.name         = "VLionPolyAdSDK"
-  spec.version      = "1.1.0"
-  spec.summary      = "VLionPolyAdSDK."
+  spec.name         = "VLionAdSDKPoly"
+  spec.version      = "1.1.2"
+  spec.summary      = "VLionAdSDKPoly."
 
   spec.description  = <<-DESC
               TopOn SDK for developer
@@ -26,53 +26,53 @@ Pod::Spec.new do |spec|
   spec.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   spec.libraries = 'c++', 'z', 'sqlite3', 'xml2', 'resolv'
   
-  spec.default_subspecs = 'VLionPolyAdSDK'
+  spec.default_subspecs = 'VLionAdSDKPoly'
   spec.source       = { :git => "https://github.com/yang152/VlionPolyAdSDK.git", :tag => "#{spec.version}" }
   
-  spec.subspec 'VLionPolyAdSDK' do |ss|
+  spec.subspec 'VLionAdSDKPoly' do |ss|
      ss.ios.deployment_target = '9.0'
-     ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDK/VLionADSDK.framework'
-     ss.resource = 'VLionPolyAdSDK/VLionADSDK/VLionAdImg.bundle'
+     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDK/VLionADSDK.framework'
+     ss.resource = 'VLionAdSDKPoly/VLionADSDK/VLionAdImg.bundle'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
   spec.subspec 'VLionADSDKBDAdapter' do |ss|
-     ss.dependency 'VLionPolyAdSDK/VLionPolyAdSDK'
+     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
      ss.ios.deployment_target = '9.0'
-     ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDKBDAdapter/VLionADSDKBDAdapter.framework'
+     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKBDAdapter/VLionADSDKBDAdapter.framework'
      ss.dependency 'BaiduMobAd_SDK'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
 
   
   spec.subspec 'VLionADSDKGDTAdapter' do |ss|
-     ss.dependency 'VLionPolyAdSDK/VLionPolyAdSDK'
+     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
      ss.ios.deployment_target = '9.0'
-     ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDKGDTAdapter/VLionADSDKGDTAdapter.framework'
+     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKGDTAdapter/VLionADSDKGDTAdapter.framework'
      ss.dependency 'GDTMobSDK'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
   spec.subspec 'VLionADSDKIMBAdapter' do |ss|
-     ss.dependency 'VLionPolyAdSDK/VLionPolyAdSDK'
+     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
      ss.ios.deployment_target = '9.0'
-     ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDKIMBAdapter/VLionADSDKIMBAdapter.framework'
+     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKIMBAdapter/VLionADSDKIMBAdapter.framework'
      ss.dependency 'InMobiSDK-China', '~> 7.4.3'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
   spec.subspec 'VLionADSDKKSAdapter' do |ss|
-     ss.dependency 'VLionPolyAdSDK/VLionPolyAdSDK'
+     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
      ss.ios.deployment_target = '9.0'
-     ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDKKSAdapter/VLionADSDKKSAdapter.framework'
+     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKKSAdapter/VLionADSDKKSAdapter.framework'
      ss.dependency 'KSAdSDK'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
   spec.subspec 'VLionADSDKSGBAdapter' do |ss|
-     ss.dependency 'VLionPolyAdSDK/VLionPolyAdSDK'
+     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
      ss.ios.deployment_target = '9.0'
-     ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDKSGBAdapter/VLionADSDKSGBAdapter.framework'
+     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKSGBAdapter/VLionADSDKSGBAdapter.framework'
      ss.dependency 'SigmobAd-iOS'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
