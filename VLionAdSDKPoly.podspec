@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "VLionAdSDKPoly"
-  spec.version      = "1.1.2"
+  spec.version      = "1.1.5"
   spec.summary      = "VLionAdSDKPoly."
 
   spec.description  = <<-DESC
@@ -42,6 +42,17 @@ Pod::Spec.new do |spec|
      ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKBDAdapter/VLionADSDKBDAdapter.framework'
      ss.dependency 'BaiduMobAd_SDK'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
+  end
+  
+  spec.subspec 'VLionADSDKBUAdapter' do |ss|
+     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
+     ss.ios.deployment_target = '9.0'
+     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKBUAdapter/VLionADSDKBUAdapter.framework'
+     ss.dependency 'Bytedance-UnionAD'
+     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
+     ss.xcconfig = {
+       'VALID_ARCHS' =>  valid_archs.join(' '),
+     }
   end
 
   
