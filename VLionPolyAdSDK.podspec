@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "VLionPolyAdSDK"
-  spec.version      = "1.0.10"
+  spec.version      = "1.1.0"
   spec.summary      = "VLionPolyAdSDK."
 
   spec.description  = <<-DESC
@@ -21,6 +21,10 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '9.0'
   spec.requires_arc = true
   valid_archs = ['armv7', 'armv7s', 'x86_64', 'arm64']
+  spec.frameworks = 'SystemConfiguration', 'CoreGraphics','Foundation','UIKit'
+  
+  spec.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
+  spec.libraries = 'c++', 'z', 'sqlite3', 'xml2', 'resolv'
   
   spec.default_subspecs = 'VLionPolyAdSDK'
   spec.source       = { :git => "https://github.com/yang152/VlionPolyAdSDK.git", :tag => "#{spec.version}" }
@@ -39,14 +43,7 @@ Pod::Spec.new do |spec|
      ss.dependency 'BaiduMobAd_SDK'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
-  
-  spec.subspec 'VLionADSDKBUAdapter' do |ss|
-     ss.dependency 'VLionPolyAdSDK/VLionPolyAdSDK'
-     ss.ios.deployment_target = '9.0'
-     ss.vendored_frameworks = 'VLionPolyAdSDK/VLionADSDKBUAdapter/VLionADSDKBUAdapter.framework'
-     ss.dependency 'Bytedance-UnionAD'
-     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
-  end
+
   
   spec.subspec 'VLionADSDKGDTAdapter' do |ss|
      ss.dependency 'VLionPolyAdSDK/VLionPolyAdSDK'
