@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "VLionADSDKSGBAdapter"
-    spec.version      = "1.0.5"
+    spec.version      = "1.1.6"
     spec.summary      = "瑞狮聚合SDK"
     
     spec.description  = <<-DESC
@@ -20,8 +20,10 @@ Pod::Spec.new do |spec|
 
     spec.source       = { :git => "https://github.com/yang152/VlionPolyAdSDK.git", :tag => "#{spec.version}" }
 
-    spec.vendored_frameworks = 'VLionADSDKSGBAdapter/VLionADSDKSGBAdapter.framework'
+    spec.vendored_frameworks = 'VLionADSDKSGBAdapter.framework'
     spec.dependency 'SigmobAd-iOS'
-    spec.dependency 'VlionPolyAdSDK‘
+    spec.dependency 'VlionPolyAdSDK'
+    
+    
     
 end

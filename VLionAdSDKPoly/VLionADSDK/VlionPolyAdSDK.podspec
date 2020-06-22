@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
     spec.name         = "VlionPolyAdSDK"
-    spec.version      = "1.0.5"
+    spec.version      = "1.1.6"
     spec.summary      = "瑞狮聚合SDK"
     
     spec.description  = <<-DESC
@@ -20,8 +20,8 @@ Pod::Spec.new do |spec|
 
     spec.source       = { :git => "https://github.com/yang152/VlionPolyAdSDK.git", :tag => "#{spec.version}" }
 
-    spec.vendored_frameworks = 'VLionADSDK/VLionADSDK.framework'
-    spec.resource = 'VLionADSDK/VLionAdImg.bundle'
+    spec.vendored_frameworks = 'VLionADSDK.framework'
+    spec.resource = 'VLionAdImg.bundle'
     
 
 end
