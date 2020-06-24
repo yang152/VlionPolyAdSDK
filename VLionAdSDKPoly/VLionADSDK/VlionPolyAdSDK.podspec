@@ -26,5 +26,6 @@ Pod::Spec.new do |spec|
     spec.dependency 'VLionAdSDKPoly/VLionADSDKIMBAdapter' , :git => 'https://github.com/yang152/VlionPolyAdSDK.git'
     spec.dependency 'VLionAdSDKPoly/VLionADSDKKSAdapter' , :git => 'https://github.com/yang152/VlionPolyAdSDK.git'
     spec.dependency 'VLionAdSDKPoly/VLionADSDKSGBAdapter' , :git => 'https://github.com/yang152/VlionPolyAdSDK.git'
+    spec.dependency 'VLionAdSDKPoly/VLionADSDKBUAdapter' , :git => 'https://github.com/yang152/VlionPolyAdSDK.git'
 
 end

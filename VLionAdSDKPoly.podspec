@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "VLionAdSDKPoly"
-  spec.version      = "1.1.7"
+  spec.version      = "1.1.8"
   spec.summary      = "VLionAdSDKPoly."
 
   spec.description  = <<-DESC
@@ -85,6 +85,23 @@ Pod::Spec.new do |spec|
      ss.ios.deployment_target = '9.0'
      ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKSGBAdapter/VLionADSDKSGBAdapter.framework'
      ss.dependency 'SigmobAd-iOS'
+     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
+  end
+  
+  spec.subspec 'VLionADSDKMGTAdapter' do |ss|
+     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
+     ss.ios.deployment_target = '9.0'
+     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKMGTAdapter/VLionADSDKMGTAdapter.framework'
+     
+     ss.dependency 'MintegralAdSDK'
+     ss.dependency 'MintegralAdSDK/NativeAd'
+     ss.dependency 'MintegralAdSDK/NativeAdvancedAd'
+     ss.dependency 'MintegralAdSDK/RewardVideoAd'
+     ss.dependency 'MintegralAdSDK/InterstitialVideoAd'
+     ss.dependency 'MintegralAdSDK/InterstitialAd'
+     ss.dependency 'MintegralAdSDK/BannerAd'
+     ss.dependency 'MintegralAdSDK/SplashAd'
+     
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
