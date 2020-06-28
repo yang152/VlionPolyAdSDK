@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Banner广告将点敲关闭回调
  */
-- (void)bannerViewWillClose:(VLNBannerView *)bannerView;
+- (void)bannerViewDidClose:(VLNBannerView *)bannerView;
 
 @end
 
