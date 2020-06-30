@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "VLionAdSDKPoly"
-  spec.version      = "1.1.9"
+  spec.version      = "2.0.0"
   spec.summary      = "VLionAdSDKPoly."
 
   spec.description  = <<-DESC
@@ -101,6 +101,25 @@ Pod::Spec.new do |spec|
      ss.dependency 'MintegralAdSDK/InterstitialAd'
      ss.dependency 'MintegralAdSDK/BannerAd'
      ss.dependency 'MintegralAdSDK/SplashAd'
+     
+     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
+  end
+  
+  spec.subspec 'RSGameVlionAd' do |ss|
+     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
+     ss.ios.deployment_target = '9.0'
+     ss.vendored_frameworks = 'VLionAdSDKPoly/RSGameVlionAd/RSGameVlionAd.framework'
+     ss.resource = 'VLionAdSDKPoly/RSGameVlionAd/RSGameVlionAd.bundle'
+     
+     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
+  end
+  
+  spec.subspec 'VLionNewsSDK' do |ss|
+     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
+     ss.ios.deployment_target = '9.0'
+     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionNewsSDK/VLionNewsSDK.framework'
+     
+     ss.dependency 'MJRefresh'
      
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
