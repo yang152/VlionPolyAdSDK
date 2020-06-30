@@ -6,10 +6,15 @@
 //  Copyright © 2019 zhulin. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "VLNNativeAdNativeModel.h"
 
 @interface VLNNativeAdModel : NSObject
+
+/**
+*  广告的size------支持kvo去监控
+*/
+@property (nonatomic, assign, readonly) CGSize adSize;
 
 @property (nonatomic ,assign) int             status;//状态码
 @property (nonatomic ,assign) int             adt;//创意类型
