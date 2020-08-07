@@ -21,6 +21,7 @@
  */
 - (void)vlionAdViewExitGame:(NSString *_Nullable)gameId;
 
+
 /**
     banner展示成功
  */
@@ -38,6 +39,7 @@
 */
 - (void)vlionBannerAdDidClosedWithGameId:(NSString *_Nullable)gameId tagId:(NSString *_Nullable)tagId;
 
+
 /**
     插屏展示成功
  */
@@ -54,6 +56,7 @@
     插屏点击关闭
 */
 - (void)vlionInterstitialAdDidClosedWithGameId:(NSString *_Nullable)gameId tagId:(NSString *_Nullable)tagId;
+
 
 /**
     激励视频展示成功
@@ -80,13 +83,39 @@
 */
 - (void)vlionRewardVideoAdDidClosedWithGameId:(NSString *_Nullable)gameId tagId:(NSString *_Nullable)tagId;
 
+
+/**
+    开屏广告加载成功
+*/
+- (void)vlionSplashAdDidLoadWithGameId:(NSString *_Nullable)gameId tagId:(NSString *_Nullable)tagId;
+/**
+    开屏广告曝光
+*/
+- (void)vlionSplashAdDidExposuredWithGameId:(NSString *_Nullable)gameId tagId:(NSString *_Nullable)tagId;
+/**
+    开屏广告点击
+*/
+- (void)vlionSplashAdDidClickWithGameId:(NSString *_Nullable)gameId tagId:(NSString *_Nullable)tagId;
+/**
+    开屏广告将要关闭
+*/
+- (void)vlionSplashAdWillCloseWithGameId:(NSString *_Nullable)gameId tagId:(NSString *_Nullable)tagId;
+/**
+    开屏广告已经关闭
+*/
+- (void)vlionSplashAdDidCloseWithGameId:(NSString *_Nullable)gameId tagId:(NSString *_Nullable)tagId;
+/**
+    开屏广告加载失败
+*/
+- (void)vlionSplashAdDidFailWithGameId:(NSString *_Nullable)gameId tagId:(NSString *_Nullable)tagId error:(NSError *_Nullable)error;
+
 @end
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RSGameListViewController : UIViewController
 /**
- 必传mediaId
+ 必传mediaId,可向客服获取
  */
 - (instancetype)initWithMediaId:(NSString *)mediaId;
 

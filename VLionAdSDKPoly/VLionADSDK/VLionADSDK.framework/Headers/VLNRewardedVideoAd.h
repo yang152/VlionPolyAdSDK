@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithTagId:(NSString *)tagId;
 
 /**
- 加载广告方法 支持 iOS8.1 及以上系统
+ 加载广告方法 支持 iOS9 及以上系统
  */
 - (void)loadAd;
 

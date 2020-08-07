@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  构造方法
-    @param tagId - 广告位 ID
+ @param tagId - 广告位 ID
  */
 - (instancetype)initWithTagId:(NSString *)tagId;
 
@@ -81,7 +81,6 @@ NS_ASSUME_NONNULL_BEGIN
                     bottomView:(nullable UIView *)bottomView
                       skipView:(nullable UIView *)skipView
               exposureDuration:(int)exposureDuration;
-
 
 @end
 

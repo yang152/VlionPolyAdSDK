@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "VLionAdSDKPoly"
-  spec.version      = "3.6.9"
+  spec.version      = "3.7.0"
   spec.summary      = "VLionAdSDKPoly."
 
   spec.description  = <<-DESC
@@ -76,7 +76,7 @@ Pod::Spec.new do |spec|
      ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
      ss.ios.deployment_target = '9.0'
      ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKKSAdapter/VLionADSDKKSAdapter.framework'
-     ss.dependency 'KSAdSDK'
+     ss.dependency 'vlionKSAdapter'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
