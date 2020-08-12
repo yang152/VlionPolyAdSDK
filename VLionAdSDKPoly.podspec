@@ -77,9 +77,7 @@ Pod::Spec.new do |spec|
      ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKKSAdapter/VLionADSDKKSAdapter.framework'
      ss.dependency 'RSPodKSAdaper'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
-     ss.xcconfig = {
-       'VALID_ARCHS' =>  ['armv7', 'armv7s']
-     }
+     ss.pod_target_xcconfig = { 'skip_validation' => true }
   end
   
   spec.subspec 'VLionADSDKSGBAdapter' do |ss|
