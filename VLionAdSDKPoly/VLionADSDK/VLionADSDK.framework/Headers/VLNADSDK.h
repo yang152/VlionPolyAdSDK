@@ -13,13 +13,11 @@
 #import "VLNSplashAd.h"
 #import "VLNInterstitialAd.h"
 #import "VLNRewardedVideoAd.h"
-#import "VLNSplashAd.h"
 #import "VLNNativeAd.h"
-#import "VLNNativeAdModel.h"
-#import "VLNNativeAdIconModel.h"
-#import "VLNNativeAdNativeModel.h"
-#import "VLNNativeExpressAdView.h"
+#import "VLNativeAdInfo.h"
 #import "VLNContent.h"
+#import "VLNDrawAd.h"
+#import "VLNDrawAdModel.h"
 
 //! Project version number for VLionADSDK.
 FOUNDATION_EXPORT double VLionADSDKVersionNumber;

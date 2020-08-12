@@ -21,7 +21,6 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '9.0'
   spec.requires_arc = true
   valid_archs = ['armv7', 'armv7s', 'x86_64', 'arm64']
-  spec.frameworks = 'SystemConfiguration', 'CoreGraphics','Foundation','UIKit'
   
   spec.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   spec.libraries = 'c++', 'z', 'sqlite3', 'xml2', 'resolv'
@@ -76,8 +75,11 @@ Pod::Spec.new do |spec|
      ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
      ss.ios.deployment_target = '9.0'
      ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKKSAdapter/VLionADSDKKSAdapter.framework'
-     ss.dependency 'vlionKSAdapter'
+     ss.dependency 'KSAdSDK', '~> 3.2.1'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
+     ss.xcconfig = {
+       'VALID_ARCHS' =>  ['armv7', 'armv7s']
+     }
   end
   
   spec.subspec 'VLionADSDKSGBAdapter' do |ss|
