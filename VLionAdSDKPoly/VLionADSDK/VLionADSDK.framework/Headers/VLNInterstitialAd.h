@@ -16,31 +16,22 @@ NS_ASSUME_NONNULL_BEGIN
 @interface VLNInterstitialAd : NSObject
 
 /**
+ *  构造方法
+ @param tagId - 广告位 ID
+ */
+- (instancetype)initWithTagId:(NSString *)tagId;
+
+@property (nonatomic, weak) id<VLNInterstitialAdDelegate> delegate;
+
+/**
  *  广告位 ID
  */
-@property (nonatomic, copy, readonly) NSString * tagId;
+@property (nonatomic, copy, readonly) NSString *tagId;
 
 /**
  *  插屏广告预加载是否完成
  */
 @property (nonatomic, assign, readonly) BOOL isReady;
-
-/**
- *  拉取广告时显示的占位图片
- *  详解：拉取广告过程中会用此图片占位。 通常设置为应用启动时的启动图即可。
- */
-@property (nonatomic, strong) UIImage *placeholderImage;
-
-
-@property (nonatomic, weak) id<VLNInterstitialAdDelegate> delegate;
-
-- (instancetype)initWithSceneName:(NSString *)sceneName;
-
-/**
- *  构造方法
- @param tagId - 广告位 ID
- */
-- (instancetype)initWithTagId:(NSString *)tagId;
 
 /**
  *  广告发起请求
