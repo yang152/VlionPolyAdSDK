@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<VLNSplashAdDelegate> delegate;
 
 /**
- * 广告请求超时时间，默认5s，单位s
+ * 广告请求超时时间，默认3s，单位s
  */
 @property (nonatomic, assign) NSTimeInterval timeout;
 
