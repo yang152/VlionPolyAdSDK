@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "VLionAdSDKPoly"
-  spec.version      = "3.7.8.2"
+  spec.version      = "3.7.9"
   spec.summary      = "VLionAdSDKPoly."
 
   spec.description  = <<-DESC
@@ -78,6 +78,16 @@ Pod::Spec.new do |spec|
      ss.dependency 'RSPodKSAdaper'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
      ss.pod_target_xcconfig = { 'skip_validation' => true }
+  end
+  
+  spec.subspec 'VLionADSDKJDAdapter' do |ss|
+     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
+     ss.ios.deployment_target = '9.0'
+     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKJDAdapter/VLionADSDKJDAdapter.framework'
+     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
+     ss.frameworks = ["SafariServices", "CoreLocation", "MapKit", "AdSupport", "CoreTelephony", "SystemConfiguration", "WebKit", "ImageIO", "Accelerate", "Photos", "AssetsLibrary", "CoreServices"]
+     ss.libraries = ["z", "sqlite3"]
+     ss.resource = 'VLionAdSDKPoly/VLionADSDKJDAdapter/JADYun.bundle'
   end
   
   spec.subspec 'VLionADSDKSGBAdapter' do |ss|
