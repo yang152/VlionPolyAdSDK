@@ -82,7 +82,10 @@
     激励视频点击关闭
 */
 - (void)vlionRewardVideoAdDidClosedWithGameId:(NSString *_Nullable)gameId tagId:(NSString *_Nullable)tagId;
-
+/**
+    激励
+*/
+- (void)vlionRewardVideoAdDidRewardEffectiveWithGameId:(NSString *_Nullable)gameId tagId:(NSString *_Nullable)tagId;
 
 /**
     开屏广告加载成功
@@ -114,6 +117,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RSGameListViewController : UIViewController
+/**
+    必传sceneName,自己在后台配置的场景名称
+*/
+- (instancetype)initWithSceneName:(NSString *)sceneName;
 /**
     必传mediaId,可向客服获取
  */

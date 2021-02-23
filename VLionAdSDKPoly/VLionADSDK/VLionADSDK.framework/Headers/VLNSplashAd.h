@@ -22,6 +22,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithTagId:(NSString *)tagId;
 
 /**
+ @param tagId 广告位id
+ @param bottomView 底部logo, 广告的尺寸根据设置的logo尺寸来计算
+ */
+- (instancetype)initWithTagId:(NSString *)tagId bottomView:(UIView *)bottomView;
+
+/**
 *  委托对象
 */
 @property (nonatomic, weak) id<VLNSplashAdDelegate> delegate;

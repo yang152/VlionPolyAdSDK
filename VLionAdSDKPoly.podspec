@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "VLionAdSDKPoly"
-  spec.version      = "3.8.0"
+  spec.version      = "3.8.0.1"
   spec.summary      = "VLionAdSDKPoly."
 
   spec.description  = <<-DESC
@@ -35,14 +35,6 @@ Pod::Spec.new do |spec|
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
-  spec.subspec 'VLionADSDKBDAdapter' do |ss|
-     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
-     ss.ios.deployment_target = '9.0'
-     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKBDAdapter/VLionADSDKBDAdapter.framework'
-     ss.dependency 'BaiduMobAd_SDK'
-     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
-  end
-  
   spec.subspec 'VLionADSDKBUAdapter' do |ss|
      ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
      ss.ios.deployment_target = '9.0'
@@ -63,14 +55,6 @@ Pod::Spec.new do |spec|
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
-  spec.subspec 'VLionADSDKIMBAdapter' do |ss|
-     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
-     ss.ios.deployment_target = '9.0'
-     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKIMBAdapter/VLionADSDKIMBAdapter.framework'
-     ss.dependency 'InMobiSDK-China', '~> 7.4.3'
-     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
-  end
-  
   spec.subspec 'VLionADSDKKSAdapter' do |ss|
      ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
      ss.ios.deployment_target = '9.0'
@@ -88,27 +72,6 @@ Pod::Spec.new do |spec|
      ss.frameworks = ["SafariServices", "CoreLocation", "MapKit", "AdSupport", "CoreTelephony", "SystemConfiguration", "WebKit", "ImageIO", "Accelerate", "Photos", "AssetsLibrary", "CoreServices"]
      ss.libraries = ["z", "sqlite3"]
      ss.resource = 'VLionAdSDKPoly/VLionADSDKJDAdapter/JADYun.bundle'
-  end
-  
-  spec.subspec 'VLionADSDKSGBAdapter' do |ss|
-     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
-     ss.ios.deployment_target = '9.0'
-     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKSGBAdapter/VLionADSDKSGBAdapter.framework'
-     ss.dependency 'SigmobAd-iOS'
-     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
-  end
-  
-  spec.subspec 'VLionADSDKMGTAdapter' do |ss|
-     ss.dependency 'VLionAdSDKPoly/VLionAdSDKPoly'
-     ss.ios.deployment_target = '9.0'
-     ss.vendored_frameworks = 'VLionAdSDKPoly/VLionADSDKMGTAdapter/VLionADSDKMGTAdapter.framework'
-     ss.dependency 'MintegralAdSDK'
-     ss.dependency 'MintegralAdSDK/NativeAdvancedAd'
-     ss.dependency 'MintegralAdSDK/RewardVideoAd'
-     ss.dependency 'MintegralAdSDK/InterstitialVideoAd'
-     ss.dependency 'MintegralAdSDK/BannerAd'
-     ss.dependency 'MintegralAdSDK/SplashAd'
-     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   
   spec.subspec 'RSGameVlionAd' do |ss|
